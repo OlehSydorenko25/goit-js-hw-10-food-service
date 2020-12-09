@@ -11,9 +11,8 @@ function defaultThems() {
   const valueStorage = localStorage.getItem('theme');
   if (!valueStorage || valueStorage === 'light-theme') {
     lightThemeOn()
-  }else if (valueStorage === 'dark-theme') darkThemeOn()
+  }else darkThemeOn()
 }
-
 defaultThems()
 
 function lightThemeOn() {
@@ -32,5 +31,6 @@ function darkThemeOn() {
 function OnChangeTheme() {
   if (!themeBtn.checked) {
     lightThemeOn()
-  } else if (themeBtn.checked) darkThemeOn()
+  } else darkThemeOn() 
 }
+
